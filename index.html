@@ -1,8 +1,28 @@
 <html>
 <head>
-<title>Hi</title>
+  <title>
+    Hi
+  </title>
 </head>
 <body>
-Hello
+  Hello
+
+  <a id="continue_link" href="#">I agree to terms of service</a>
+
+  <script type="application/javascript">
+    function getUrlParam(parameter, defaultvalue){
+      var urlparameter = defaultvalue;
+      if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+      }
+      return urlparameter;
+    }
+    
+    document.getElementById("continue_link").addEventListener("click", function() {
+      var baseGrantUrl = getUrlParam("base_grant_url");
+      var continueUrl = getUrlParam("continue_url");
+      window.location = baseGrantUrl + "?" + continueUrl;
+    });
+  </script>
 </body>
 </html>
