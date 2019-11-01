@@ -37,6 +37,7 @@
       var baseGrantUrl = getUrlParam("base_grant_url");
       var continueUrl = getUrlParam("continue_url");
       window.location = baseGrantUrl + "?continue_url=" + continueUrl;
+      return false;
     });
   </script>
 </body>
