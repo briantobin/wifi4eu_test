@@ -6,10 +6,18 @@
 </head>
 <body>
   Hello
-
+  <br/>
   <a id="continue_link" href="#">I agree to terms of service</a>
 
   <script type="application/javascript">
+    function getUrlVars() {
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+      });
+      return vars;
+    }
+
     function getUrlParam(parameter, defaultvalue){
       var urlparameter = defaultvalue;
       if(window.location.href.indexOf(parameter) > -1){
