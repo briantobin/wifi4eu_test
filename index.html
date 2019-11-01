@@ -36,7 +36,7 @@
     document.getElementById("continue_link").addEventListener("click", function() {
       var baseGrantUrl = getUrlParam("base_grant_url");
       var continueUrl = getUrlParam("continue_url");
-      window.location = baseGrantUrl + "?" + continueUrl;
+      window.location = baseGrantUrl + "?continue_url=" + continueUrl;
     });
   </script>
 </body>
